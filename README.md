@@ -9,6 +9,12 @@ It provides a map with a draggable pin that, upon being moved, updates latitude 
 
 Simply download a copy of this repo, or add it as a submodule via git, to the root of your SilverStripe installation.
 
+Edit the _config.php to include your Google Map key, e.g:
+
+```
+define("GOOGLE_MAP_KEY", "your_key");
+```
+
 Don't forget to run ``dev/build?flush=all``
 
 ##Basic Usage
