@@ -59,7 +59,6 @@
 
 				});
 
-
 				$('#' + opts.tab + '[aria-hidden="false"]').entwine({
 		            onmatch: function() {
 		               
