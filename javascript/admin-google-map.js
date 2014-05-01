@@ -2,6 +2,9 @@
  * Influenced by: https://github.com/kinglozzer/SilverStripe-GMapsObject/blob/master/javascript/GMapsObject.js
  */
 
+var ss = ss || {};
+
+
 (function($) {
 
 	$.entwine('ss', function($){	
