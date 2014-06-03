@@ -33,7 +33,8 @@ class GoogleMapField extends LiteralField {
 			"address_field" => $params['address_field'],
 			"zoom" => $params['map_zoom'],
 			"start_lat" => $params['start_lat'],
-			"start_lng" => $params['start_lng']
+			"start_lng" => $params['start_lng'],
+			"key" => GOOGLE_MAP_KEY
 		);
 
 		// Build content of form field
@@ -49,8 +50,6 @@ class GoogleMapField extends LiteralField {
 		$this->content = $content;
 
 		// Establish requirements
-
-		Requirements::javascript("https://maps.googleapis.com/maps/api/js?key=" . GOOGLE_MAP_KEY . "&sensor=false");
 		Requirements::javascript(ADMIN_GOOGLE_MAP_DIR . "/javascript/admin-google-map.js");
 
 		if(!$this->stat('jquery_included')) {
