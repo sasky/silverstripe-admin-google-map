@@ -109,6 +109,7 @@ function initAdminGoogleMaps() {
 	            onmatch: function() {
 	               
 					google.maps.event.trigger(map, 'resize');
+					map.panTo(marker.getPosition());
 
 	            }
 	        });
