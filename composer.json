@@ -6,7 +6,7 @@
 	"keywords": ["silverstripe", "google", "map", "cms", "admin", "latitude", "longitude"],
 	"license": "BSD-3-Clause",
 	"authors": [
-		{"name": Matt Kibbler", "email": "matt.kibbler@weareknit.co.uk"}
+		{"name": "Matt Kibbler", "email": "matt.kibbler@weareknit.co.uk"}
 	],
 	"support": {
 	  "issues": "https://github.com/WeAreKnit/silverstripe-admin-google-map/issues"
