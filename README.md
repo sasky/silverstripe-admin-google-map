@@ -30,21 +30,23 @@ You would then simply need to create a GoogleMapField, giving it a name as you w
 ```
 public function getCMSFields() {
 
-		$fields = parent::getCMSFields();
+	$fields = parent::getCMSFields();
+
+	$fields->addFieldsToTab("Root.Location", array(
+		// Create hidden latitude field
+		HiddenField::create("Lat"),
+		// Create hidden longitude field
+		HiddenField::create("Lng"),
+		// Create Google map field
+		GoogleMapField::create("Map", array(
 		
-		// Add a hidden latitude field
-		$latField = new HiddenField("Lat", "Map Marker Latitude");
-		$fields->addFieldToTab("Root.Location", $latField);
-
-    // Add a hidden longitude field
-		$lngField = new HiddenField("Lng", "Map Marker Longitude");
-		$fields->addFieldToTab("Root.Location", $lngField);
+			// Override any default options
+			
+		))
+	));
 	
-    // Add the Google Map field
-		$googleMapField = new GoogleMapField("Map");
-		$fields->addFieldToTab("Root.Location", $googleMapField);		
+	return $fields;
 
-		return $fields;
 }
 ```
 
@@ -59,7 +61,7 @@ If your situation isn't the same as above, you can provide any of the following 
 These options can be passed as key => value pairs as the second argument of the **GoogleMapField** function. These options and their default values are:
 
 ```
-$googleMapField = new GoogleMapField("Map", array(
+$googleMapField = GoogleMapField::create("Map", array(
   "height" => "500px",                          // The height of the map element
   "heading" => "",                              // A heading in a <h4> tag to appear before the map
   "lng_field" => "Form_ItemEditForm_Lng",       // The ID of the longitude input element
