@@ -5,6 +5,8 @@ This is a very basic module for getting a Google Map into the Silverstripe CMS.
 
 It provides a map with a draggable pin that, upon being moved, updates latitude and longitude CMS fields.
 
+![Screenshot](docs/screenshot.png)
+
 ##Installation
 
 Simply download a copy of this repo, or add it as a submodule via git, to the root of your SilverStripe installation.
