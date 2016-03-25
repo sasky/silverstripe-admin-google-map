@@ -116,7 +116,7 @@ function initAdminGoogleMaps() {
 
 	        if(opts.address_field !== undefined) {
 
-	        	$addressField = $('.cms-edit-form input[name='+opts.address_field+']');
+	        	$addressField = $('.cms-edit-form input[name='+opts.address_field+'], .cms-edit-form textarea[name='+opts.address_field+']');
 
 	        	addressVal = $addressField.val();
 	        	newAddress = addressVal;
